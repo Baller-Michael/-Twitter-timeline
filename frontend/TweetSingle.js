@@ -18,7 +18,6 @@ function TweetSingle({
             </div>
         </div>
     );
-
 }
 
 export default TweetSingle;
