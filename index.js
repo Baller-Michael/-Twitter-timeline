@@ -23,11 +23,12 @@ app.get('/', (req, res) => {
 })
 
 app.get('/getTweets', (req, res) => {
-    res.send('Getting data');
-    var params = { screen_name: 'Michael41984197' };
+    var params = { screen_name: req.query.username };
     T.get('statuses/user_timeline', params, function (error, data, response) {
-        console.log(data);
+        res.send(data);
     });
 })
 
+
+// Michael41984197
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
