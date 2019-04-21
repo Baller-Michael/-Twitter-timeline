@@ -45,7 +45,6 @@ class App extends Component {
             tweetDate={el.created_at}
           />
         ))
-
         }
       </div>
     );
