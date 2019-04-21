@@ -33,9 +33,9 @@ class App extends Component {
 
 
     return (
-      <div className="App">
-        <input type="text" name="username" placeholder="Enter username" onChange={this.handleChange} value={username} />
-        <button onClick={this.getTweets}>submit</button>
+      <div className="container">
+        <input className="validate col s6" type="text" name="username" placeholder="Enter username" onChange={this.handleChange} value={username} />
+        <button className="waves-effect waves-light btn col s3" onClick={this.getTweets}>submit</button>
         {tweets.map(el => (
           <TweetSingle
             photo={el.user.profile_image_url}

@@ -9,11 +9,13 @@ function TweetSingle({
 }) {
     return (
         <div className='container'>
-            <img src={photo} className=''/>
-            <strong>{fullName}</strong>
-            <span>{userId}</span>
-            <span>{(new Date(tweetDate)).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            <p>{text}</p>
+            <div className="row card blue-grey darken-1">
+                <img src={photo} className='circle responsive-img col s2' />
+                <strong className="col s1">{fullName}</strong>
+                <span className="col s3">{userId}</span>
+                <span className="col s4">{(new Date(tweetDate)).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                <p className="col s8 white-text">{text}</p>
+            </div>
         </div>
     );
 

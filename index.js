@@ -26,6 +26,7 @@ app.get('/getTweets', (req, res) => {
     var params = { screen_name: req.query.username };
     T.get('statuses/user_timeline', params, function (error, data, response) {
         res.send(data);
+        console.log(data);
     });
 })
 
