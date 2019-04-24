@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/getTweets', (req, res) => {
-    var params = { screen_name: req.query.username };
+    var params = { screen_name: req.query.username, count: 100 };
     T.get('statuses/user_timeline', params, function (error, data, response) {
         res.send(data);
         console.log(data);
