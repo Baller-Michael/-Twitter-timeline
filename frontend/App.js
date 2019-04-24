@@ -43,6 +43,7 @@ class App extends Component {
             fullName={el.user.name}
             userId={el.user.screen_name}
             tweetDate={el.created_at}
+            imgUrl={ el.entities.media[0].media_url_https ? el.entities.media[0].media_url_https : null }
           />
         ))
         }

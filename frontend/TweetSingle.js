@@ -5,7 +5,8 @@ function TweetSingle({
     text,
     fullName,
     userId,
-    tweetDate
+    tweetDate,
+    imgUrl
 }) {
     return (
         <div className='container'>
@@ -15,7 +16,9 @@ function TweetSingle({
                 <span className="col s3">{userId}</span>
                 <span className="col s4">{(new Date(tweetDate)).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 <p className="col s8 white-text">{text}</p>
+                <img className="responsive-img" src={imgUrl} />
             </div>
+            
         </div>
     );
 }
