@@ -37,13 +37,14 @@ class App extends Component {
         <input className="validate col s6" type="text" name="username" placeholder="Enter username" onChange={this.handleChange} value={username} />
         <button className="waves-effect waves-light btn col s3" onClick={this.getTweets}>submit</button>
         {tweets.map(el => (
+          el.in_reply_to_screen_name ? null :
           <TweetSingle
             photo={el.user.profile_image_url}
             text={el.text}
             fullName={el.user.name}
             userId={el.user.screen_name}
             tweetDate={el.created_at}
-            imgUrl={ el.entities.media[0].media_url_https ? el.entities.media[0].media_url_https : null }
+            imgUrl={ el.entities.media ? el.entities.media[0].media_url_https : null }
           />
         ))
         }
